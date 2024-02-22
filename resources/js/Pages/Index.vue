@@ -48,21 +48,22 @@ watch(allCorners, (value) => {
 });
 
 const resetValues = () => {
-  cssValues.value = {
-    isAdvancedFormat: isAdvancedControls.value,
-    topLeft: [2],
-    topRight: [2],
-    bottomRight: [2],
-    bottomLeft: [2],
-    topLeftVertical: [2],
-    topRightVertical: [2],
-    bottomRightVertical: [2],
-    bottomLeftVertical: [2],
-    borderSize: [4],
-    borderType: 'solid',
-    borderColor: '#D4D4D8',
-    backgroundColor: '#F4F4F5',
-  };
+    allCorners.value = [2];
+    cssValues.value = {
+        isAdvancedFormat: isAdvancedControls.value,
+        topLeft: [2],
+        topRight: [2],
+        bottomRight: [2],
+        bottomLeft: [2],
+        topLeftVertical: [2],
+        topRightVertical: [2],
+        bottomRightVertical: [2],
+        bottomLeftVertical: [2],
+        borderSize: [4],
+        borderType: 'solid',
+        borderColor: '#D4D4D8',
+        backgroundColor: '#F4F4F5',
+    };
 };
 </script>
 
@@ -76,7 +77,7 @@ const resetValues = () => {
             </h1>
         </div>
         <div class="flex relative space-x-4 items-center h-full">
-            <div class="w-1/3 xl:w-1/4 space-y-4 bg-zinc-100 p-4 border border-zinc-300 rounded-md">
+            <div class="w-1/3 xl:w-1/4 max-w-80 space-y-4 bg-zinc-100 p-4 border border-zinc-300 rounded-md">
                 <Tabs default-value="simple">
                     <TabsList class="flex">
                         <TabsTrigger value="simple" class="flex-1 text-xs xl:text-sm" @click="isAdvancedControls = false">
@@ -316,11 +317,11 @@ const resetValues = () => {
                     <CssGenerator
                         :cssValues="cssValues"
                     />
-                    <Button variant="ghost" @click="resetValues" class="text-xs xl:text-lg">
+                    <Button variant="ghost" @click="resetValues" class="text-xs xl:text-sm">
                         Resetar valores
                     </Button>
                 </div>
-                <div class="w-1/2 h-[400px] bg-zinc-200" :style="{
+                <div class="w-[500px] h-[400px] bg-zinc-200" :style="{
                     borderRadius: isAdvancedControls ? `${cssValues.topLeft}% ${cssValues.topRight}% ${cssValues.bottomRight}% ${cssValues.bottomLeft}% / ${cssValues.topLeftVertical}% ${cssValues.topRightVertical}% ${cssValues.bottomRightVertical}% ${cssValues.bottomLeftVertical}%` : `${cssValues.topLeft}% ${cssValues.topRight}% ${cssValues.bottomRight}% ${cssValues.bottomLeft}%`,
                     border: `${cssValues.borderSize}px ${cssValues.borderType} ${cssValues.borderColor}`,
                     backgroundColor: `${cssValues.backgroundColor}`

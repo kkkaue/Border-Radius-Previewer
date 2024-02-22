@@ -44,8 +44,8 @@ const updateCode = () => {
 <template>
     <Dialog>
         <DialogTrigger as-child>
-        <Button variant="default" @click="updateCode" class="text-xs xl:text-lg">
-            Gerar Código CSS
+        <Button variant="default" @click="updateCode" class="text-xs xl:text-sm">
+            Gerar CSS
         </Button>
         </DialogTrigger>
         <DialogContent class="max-w-3xl p-4">
