@@ -72,7 +72,7 @@ const resetValues = () => {
 
     <div class="container min-h-screen mx-auto p-4">
         <div class="mb-4 text-center">
-            <h1 class="text-4xl font-bold text-zinc-900">
+            <h1 class="text-3xl font-bold text-zinc-900">
                 Border-radius generator
             </h1>
         </div>
