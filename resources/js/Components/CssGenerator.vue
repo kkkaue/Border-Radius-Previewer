@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, defineProps, watch } from 'vue'
+// @ts-ignore
 import HighLight from "vue3-highlight-component";
 
 import { Button } from '@/Components/ui/button';
